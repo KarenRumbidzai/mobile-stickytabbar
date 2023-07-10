@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_StickyTabBar
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <stickytabbar>
+            <config_general>
+                <stickytabbar_labeldisplay>1</stickytabbar_labeldisplay>
+                <platform_labeldisplay>0</platform_labeldisplay>
+            </config_general>
+        </stickytabbar>
+    </default>
+</config>
