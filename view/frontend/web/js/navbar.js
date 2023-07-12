@@ -3,7 +3,10 @@
  * @copyright Copyright © Vectra Business Technologies
  * @package Vectra_StickyTabBar
  */
-require(['jquery','mage/url'], function($, url){
+require([
+    'jquery',
+    'mage/url'
+], function($, url){
     $(document).ready( function() {
 
         $('body').addClass('stickyTabBar')
@@ -39,29 +42,19 @@ require(['jquery','mage/url'], function($, url){
             }
         });
 
-        $(document).on('click', '#closeMiniCart', function () {
-            $('body').removeClass('openCart');
-            $('.minicart-wrapper, .mage-dropdown-dialog').hide();
-            console.log('close button clicked')
-        })
-
         if ($(window).innerWidth() < 767) {
-            $('#navbar').delay(500).fadeIn(500)
-            $(document).on("click", "#vectraMiniCart", function() {
-                if (!$('body').hasClass('openCart')) {
-                    $('body').addClass('openCart');
-                    $('.minicart-wrapper, .mage-dropdown-dialog').show();
-                    $('.minicart-items-wrapper').css({'height': 'auto'});
-                } else {
-                    $('body').removeClass('openCart');
-                    $('.minicart-wrapper, .mage-dropdown-dialog').hide();
-                }
+            
+            // if ($('.block-minicart').hasClass('stickyMinicart')) {
+            //     $('.viewcart').parent().parent().addClass('stickySliderView')
+            // }
+
+            $('#navbar').delay(500).fadeIn(500);
+
+            $(document).on("click", "#vectraMiniCart", function(event) {
+                event.preventDefault()
+                $('.openMiniCartModal').trigger('click');
+                $('.viewcart').parent().parent().addClass('stickySliderView')
             }); 
-    
-            $(document).on("click", "#btn-minicart-close", function() {
-                $('.mage-dropdown-dialog').hide();
-                $('body').removeClass('openCart');
-            })
         }
         
     });

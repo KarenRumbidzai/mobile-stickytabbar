@@ -8,8 +8,6 @@
  */
 ?>
 
-<?php $helper = $this->helper('Vectra\StickyTabBar\Helper\Data'); ?>
-
 <style>.appify-reload {opacity: 0;}</style>
 
 <?php if($block->isEnabled()): ?>
@@ -95,7 +93,7 @@
                         $('.authorization-link, .authorization-link + li').hide()
                     }
                     if ($(<?php if($NavFive['enabled']) ?>)) {
-                        $('.action.showcart').hide()
+                        $('.showcart.openMiniCartModal').hide()
                     }
                 }
             })
