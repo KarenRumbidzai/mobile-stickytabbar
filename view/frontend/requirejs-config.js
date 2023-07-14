@@ -5,6 +5,6 @@
  */
 var config = {
     deps: [
-        "Vectra_StickyTabBar/js/navbar"
+        "Vectra_StickyTabBar/js/stickyTabBar"
     ]
 };

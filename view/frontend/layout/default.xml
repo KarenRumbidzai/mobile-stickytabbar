@@ -5,7 +5,7 @@
             <referenceBlock name="minicart" template="Vectra_StickyTabBar::cart/minicart.phtml" />
         </referenceContainer>
         <referenceContainer name="before.body.end">
-            <block class="Vectra\StickyTabBar\Block\StickyTabBar" name="stickytabbar" template="Vectra_StickyTabBar::nav-bar.phtml"></block>
+            <block class="Vectra\StickyTabBar\Block\StickyTabBar" name="stickytabbar" template="Vectra_StickyTabBar::stickyTabBar.phtml"></block>
         </referenceContainer>
     </body>
 </page>
