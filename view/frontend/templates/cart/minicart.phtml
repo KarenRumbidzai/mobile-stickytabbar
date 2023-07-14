@@ -8,7 +8,7 @@
 /** @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer */
 ?>
 
-<?php $isStickyTabEnabled = $block->isStickyTabEnabled() ?>
+<?php $isStickyTabEnabled = $block->isStickyTabModuleEnabled() ?>
 
 <?php if($isStickyTabEnabled): ?>
     <div data-block="minicart" class="minicart-wrapper">
@@ -122,12 +122,17 @@
         ], function ($) {
             $(document).ready (function () {
                 if ($(window).innerWidth() < 767) {
+                    $('.openDefaultMiniCart').hide();
                     $('.openMiniCartModal').click(function (event) {
                         event.preventDefault()
                     })
                 } else {
-                    $('.action.showcart').show()
+                    $('.openDefaultMiniCart').show();
                 }
+
+                $('.minicart-wrapper').on('modalclosed', function() { 
+                    $('.tabMiniCart').removeClass('slider-open')
+                });
             })
         })
     </script>

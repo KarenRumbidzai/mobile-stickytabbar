@@ -67,6 +67,7 @@
                 <a href="/checkout/cart/" id="vectraMiniCart">
                     <img class="nav-icon" src="<?= $NavFive['icon']; ?>" />
                     <span class="title"><?= $NavFive['title']; ?></span>
+                    <div class="navbarQty initialQty" style="display: none;">0</div>
                 </a>
                 <input type="hidden" class="nav_iv" value="<?= $NavFive['iconactive']; ?>" />
                 <input type="hidden" class="nav_bb" />
@@ -81,17 +82,13 @@
         ], function (customerData, $) {
             'use strict';
             customerData.get('cart').subscribe(function (cartInfo) {
-                $('.nav-item.tabMiniCart a').append('<div class="navbarQty">' + cartInfo['summary_count'] + '</div>');
+                $('.nav-item.tabMiniCart a').append('<div class="navbarQty hasQty">' + cartInfo['summary_count'] + '</div>');
             }, this);
 
             $(document).ready(function () {
-                // remove magento default icons if cart on accout is enabled
                 if ($(window).innerWidth() < 767) {
                     if ($(<?php if($NavFour['enabled']) ?>)) {
                         $('.authorization-link, .authorization-link + li').hide()
-                    }
-                    if ($(<?php if($NavFive['enabled']) ?>)) {
-                        $('.showcart.openMiniCartModal').hide()
                     }
                 }
             })

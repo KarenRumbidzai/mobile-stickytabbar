@@ -9,12 +9,12 @@ require([
 ], function($, url){
     $(document).ready( function() {
 
-        $('body').addClass('stickyTabBar')
-
         let path = window.location.href;
         let fullpath = path.replace('%/', '');
 
         url.setBaseUrl(BASE_URL);
+
+        $('body').addClass('stickyTabBar')
 
         $('#navbar a').each(function() {
             if (this.href === fullpath) {
@@ -40,17 +40,36 @@ require([
             }
         });
 
+
+        function checkSlideOpen () {
+            if ($('.minicart-wrapper').hasClass('_has-modal')) {
+                $('.tabMiniCart').addClass('slider-open')
+            } else {
+                $('.tabMiniCart').removeClass('slider-open')
+            }             
+        }
+
+        if (!$('.navbarQty').hasClass('hasQty')) {
+            setTimeout(function() {
+                $('.initialQty').show()
+            }, 1000)
+        }
+
         if ($(window).innerWidth() < 767) {
             $('#navbar').delay(500).fadeIn(500);
+            
             $(document).on("click", "#vectraMiniCart", function(event) {
                 event.preventDefault()
                 $('.openMiniCartModal').trigger('click');
                 $('.viewcart').parent().parent().addClass('stickySliderView')
+                checkSlideOpen ()
             }); 
-        } else {
-            $('.openMiniCartModal').hide()
-        }
-        
+
+            $(document).on('click', '.minicart-wrapper .action-close', function () {
+                $('.tabMiniCart').removeClass('slider-open')
+            })
+        } 
+                    
     });
 
 });

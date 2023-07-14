@@ -29,7 +29,7 @@ class MiniCartStickyTabBar extends \Magento\Checkout\Block\Cart\Sidebar
      * 
      * @return bool
     */
-    public function isStickyTabEnabled()
+    public function isStickyTabModuleEnabled()
     {
         $isStickyTabEnabled = $this->getConfigValue('stickytabbar/config_general/stickytabbar_enable');
 
