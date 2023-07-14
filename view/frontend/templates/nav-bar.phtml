@@ -8,9 +8,7 @@
  */
 ?>
 
-<style>.appify-reload {opacity: 0;}</style>
-
-<?php if($block->isEnabled()): ?>
+<?php if($block->isStickyTabEnabled()): ?>
     <div id="navbar" class="mobile-stickyBar" data-bind="scope: 'customer'" style="display: none;">
         <?php
             $NavOne = $block->getNavOneData();
@@ -65,8 +63,8 @@
         <?php endif; ?>
 
         <?php if($NavFive['enabled']): ?>
-            <div class="nav-item stickyMiniCart">
-                <a href="#" id="vectraMiniCart">
+            <div class="nav-item tabMiniCart">
+                <a href="/checkout/cart/" id="vectraMiniCart">
                     <img class="nav-icon" src="<?= $NavFive['icon']; ?>" />
                     <span class="title"><?= $NavFive['title']; ?></span>
                 </a>
@@ -83,7 +81,7 @@
         ], function (customerData, $) {
             'use strict';
             customerData.get('cart').subscribe(function (cartInfo) {
-                $('.nav-item.stickyMiniCart a').append('<div class="navbarQty">' + cartInfo['summary_count'] + '</div>');
+                $('.nav-item.tabMiniCart a').append('<div class="navbarQty">' + cartInfo['summary_count'] + '</div>');
             }, this);
 
             $(document).ready(function () {

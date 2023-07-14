@@ -19,9 +19,7 @@ require([
         $('#navbar a').each(function() {
             if (this.href === fullpath) {
                 if($(this).parent().hasClass('appify-reload')) {
-                    $(this).parent().removeClass('nav-item appify-reload appify-opacity');
                     $(this).parent().removeClass('active');
-                    $(this).parent().addClass('nav-item active appify-reload appify-opacity');
                 } else {
                     $(this).parent().addClass('active');
                 }
@@ -43,18 +41,14 @@ require([
         });
 
         if ($(window).innerWidth() < 767) {
-            
-            // if ($('.block-minicart').hasClass('stickyMinicart')) {
-            //     $('.viewcart').parent().parent().addClass('stickySliderView')
-            // }
-
             $('#navbar').delay(500).fadeIn(500);
-
             $(document).on("click", "#vectraMiniCart", function(event) {
                 event.preventDefault()
                 $('.openMiniCartModal').trigger('click');
                 $('.viewcart').parent().parent().addClass('stickySliderView')
             }); 
+        } else {
+            $('.openMiniCartModal').hide()
         }
         
     });

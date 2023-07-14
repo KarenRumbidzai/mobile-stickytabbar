@@ -42,7 +42,7 @@ class StickyTabBar extends StickyTabBarIndex
      * 
      * @return bool
      */
-    public function isEnabled() {
+    public function isStickyTabEnabled() {
         return $this->getConfigValue('stickytabbar/config_general/stickytabbar_enable');
     }
 
