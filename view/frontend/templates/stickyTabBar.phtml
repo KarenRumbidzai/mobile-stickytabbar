@@ -1,0 +1,99 @@
+<?php
+/**
+ * @author Vectra Team
+ * @copyright Copyright © Vectra Business Technologies
+ * @package Vectra_StickyTabBar
+ *
+ * @var $block \Vectra\StickyTabBar\Block\StickyTabBar
+ */
+?>
+
+<?php if($block->isStickyTabEnabled()): ?>
+    <div id="navbar" class="mobile-stickyBar" data-bind="scope: 'customer'" style="display: none;">
+        <?php
+            $NavOne = $block->getNavOneData();
+            $NavTwo = $block->getNavTwoData();
+            $NavThree = $block->getNavThreeData();
+            $NavFour = $block->getNavFourData();
+            $NavFive = $block->getNavFiveData();
+        ?>
+
+        <?php if($NavOne['enabled']): ?>
+            <div class="nav-item">
+                <a href="<?= $NavOne['link']; ?>">
+                    <img class="nav-icon" src="<?= $NavOne['icon']; ?>"/>
+                    <span class="title"><?= $NavOne['title']; ?></span>
+                </a>
+                <input type="hidden" class="nav_iv" value="<?= $NavOne['iconactive']; ?>" />
+                <input type="hidden" class="nav_bb" />
+            </div>
+        <?php endif; ?>
+
+        <?php if($NavTwo['enabled']): ?>
+            <div class="nav-item">
+                <a href="<?= $NavTwo['link']; ?>">
+                    <img class="nav-icon" src="<?= $NavTwo['icon']; ?>"/>
+                    <span class="title"><?= $NavTwo['title']; ?></span>
+                </a>
+                <input type="hidden" class="nav_iv" value="<?= $NavTwo['iconactive']; ?>" />
+                <input type="hidden" class="nav_bb" />
+            </div>
+        <?php endif; ?>
+
+        <?php if($NavThree['enabled']): ?>
+            <div class="nav-item">
+                <a href="<?= $NavThree['link']; ?>">
+                    <img class="nav-icon" src="<?= $NavThree['icon']; ?>"/>
+                    <span class="title"><?= $NavThree['title']; ?></span>
+                </a>
+                <input type="hidden" class="nav_iv" value="<?= $NavThree['iconactive']; ?>" />
+                <input type="hidden" class="nav_bb" />
+            </div>
+        <?php endif; ?>
+
+        <?php if($NavFour['enabled']): ?>
+            <div class="nav-item">
+                <a href="<?= __('/customer/account/') ?>">
+                    <img class="nav-icon" src="<?= $NavFour['icon']; ?>"/>
+                    <span class="title"><?= $NavFour['title']; ?></span>
+                </a>
+                <input type="hidden" class="nav_iv" value="<?= $NavFour['iconactive']; ?>" />
+                <input type="hidden" class="nav_bb" />
+            </div>
+        <?php endif; ?>
+
+        <?php if($NavFive['enabled']): ?>
+            <div class="nav-item tabMiniCart">
+                <a href="/checkout/cart/" id="vectraMiniCart">
+                    <img class="nav-icon" src="<?= $NavFive['icon']; ?>" />
+                    <span class="title"><?= $NavFive['title']; ?></span>
+                    <div class="navbarQty initialQty" style="display: none;">0</div>
+                </a>
+                <input type="hidden" class="nav_iv" value="<?= $NavFive['iconactive']; ?>" />
+                <input type="hidden" class="nav_bb" />
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <script type="text/javascript">
+        require([
+            'Magento_Customer/js/customer-data',
+            'jquery'
+        ], function (customerData, $) {
+            'use strict';
+            customerData.get('cart').subscribe(function (cartInfo) {
+                $('.nav-item.tabMiniCart a').append('<div class="navbarQty hasQty">' + cartInfo['summary_count'] + '</div>');
+            }, this);
+
+            $(document).ready(function () {
+                if ($(window).innerWidth() < 767) {
+                    if ($(<?php if($NavFour['enabled']) ?>)) {
+                        $('.authorization-link, .authorization-link + li').hide()
+                    }
+                }
+            })
+
+        });
+    </script>
+
+<?php endif; ?>

@@ -1,0 +1,205 @@
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_StickyTabBar
+*/
+
+.stickyTabBar {
+
+  #navbar {
+    @media (min-width: @screen__m) {
+      display: none;
+    }
+    background: #ffffff;
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-self:center;
+    align-content: center;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 0px -5px 15px -6px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px -5px 15px -6px rgba(0,0,0,0.36);
+    box-shadow: 0px -5px 15px -6px rgba(0,0,0,0.36);
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    .nav-item {
+      a { 
+        &:hover, &:link, &:visited, &:active {
+          text-decoration: none; 
+        }
+      }
+  
+      .nav-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        max-width: 20px;
+        margin-bottom: 2px;
+      }
+  
+      .title {
+        font-size: 12px;
+        color: @color-black;
+      }
+  
+      .navbarQty {
+        position: absolute;
+        background: #f0f0f0;
+        color: @color-black;
+        font-size: 10px;
+        border-radius: 18px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        top: 10px;
+        right: 11px;
+        line-height: 20px;
+      }
+      &.tabMiniCart {
+        &.slider-open {
+          .nav-icon { width: 0; }
+          a {
+            &:before {
+              content: '';
+              background: url(../images/cart_active.png) no-repeat center center;
+              width: 20px;
+              height: 20px;
+              display: block;
+              background-size: 22px;
+              left: 2px;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: (@screen__m - 1)) {
+    padding-bottom: 72px;
+    
+    .block-minicart {
+      &.stickyMinicart {
+        display: inline-block;
+        position: relative;
+        border: none;
+        width: 100%;
+        padding: 0;
+        right: 0;
+        box-shadow: none;
+        &:before,
+        &:after {
+          border-color: transparent;
+        }
+      }
+      .minicart-items-wrapper {
+        height: auto !important;
+        border-bottom: none;
+        .minicart-items {
+          position: relative;
+          overflow-x: hidden;
+          overflow-y: auto;
+          max-height: 60vh;
+          height: 45vh;
+          // chrome scroll fix
+          &::-webkit-scrollbar {
+              display: none;
+              width: 0 !important
+          }
+          // firefox + edge scroll fix
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+
+          .product-item {
+              &:last-child {
+                border-bottom: 1px solid @color-gray_light;
+              }
+          }
+        }
+      }
+    }
+
+    .stickyMinicart {
+      .stickySliderView {
+        border-top: 1px solid @color-gray_light;
+        right: 0;
+        position: fixed;
+        overflow: hidden;
+        width: 90%;
+        bottom: 10%;
+        background: @color-white;
+        z-index: 999;
+        padding: 20px;
+      }
+    }
+
+    #closeMiniCart {
+      position: absolute;
+      right: 0;
+      top: 2px;
+      background: transparent;
+      border: 0;
+      &:before {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 14px;
+        line-height: 14px;
+        color: @color-gray46;
+        content: '\e616';
+        font-family: 'luma-icons';
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+      }
+      @media (min-width: @screen__m) {
+        display: none;
+      }
+    }  
+
+    #btn-minicart-close {
+      display: none;
+    }
+
+  }
+
+  .minicart-wrapper {
+    @media screen and (min-width: @screen__m) {
+      display: block !important;
+    }
+  }
+
+  @media only screen and (device-width : 414px) and (device-height : 736px) and (-webkit-device-pixel-ratio : 3) {
+    .minicart-wrapper {
+      .block-minicart {
+        &.stickyMinicart {
+          &:before,
+          &:after {
+            border-color: transparent;
+            display: none;
+          }
+        }
+      }
+    } 
+  }
+
+  @media screen and (max-width: @screen__xxs) {
+    #top-cart-btn-checkout {
+      font-size: 16px;
+    }
+  }
+
+}
+
+
+

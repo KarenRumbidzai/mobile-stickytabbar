@@ -1,0 +1,22 @@
+{
+    "name": "vectra/stickytabbar",
+    "description": "description",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "kr@vectra.co.za",
+            "name": "Karen Rumbie"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4" : {
+            "Vectra\\StickyTabBar\\": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_StickyTabBar
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+   <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Vectra_StickyTabBar::config_vectra_stickytabbar" title="Vectra Sticky Tab Bar" translate="title" />
+            </resource>
+        </resources>
+    </acl>
+</config>

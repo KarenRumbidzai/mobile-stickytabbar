@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_StickyTabBar
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Vectra\StickyTabBar\Model\Upload\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">vectra_creditstorebase/tmp/uploads</argument>
+			<argument name="basePath" xsi:type="string">vectra_creditstorebase/uploads</argument>
+			<argument name="allowedExtensions" xsi:type="array">
+				<item name="jpg" xsi:type="string">jpg</item>
+				<item name="jpeg" xsi:type="string">jpeg</item>
+				<item name="png" xsi:type="string">png</item>
+				<item name="PNG" xsi:type="string">png</item>
+				<item name="svg" xsi:type="string">svg</item>
+
+			</argument>
+        </arguments>
+    </type>
+	<preference for="Magento\Checkout\Block\Cart\Sidebar" type="Vectra\StickyTabBar\Block\Cart\MiniCartStickyTabBar" />
+</config>
