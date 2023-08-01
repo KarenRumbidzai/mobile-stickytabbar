@@ -44,14 +44,12 @@ class StickyTabBar extends Template
     }
 
     /**
-     * Returns if StickyTabBar Share is enabled
+     * Returns if StickyTabBar is enabled
      * 
      * @return bool
      */
     public function isStickyTabEnabled() {
-
         return $this->_miniCartStickyTabBar->isStickyTabModuleEnabled();
-        // return $this->getConfigValue('stickytabbar/config_general/stickytabbar_enable');
     }
 
     /**

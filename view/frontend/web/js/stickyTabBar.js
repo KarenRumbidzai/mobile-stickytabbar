@@ -3,6 +3,7 @@
  * @copyright Copyright © Vectra Business Technologies
  * @package Vectra_StickyTabBar
  */
+
 require([
     'jquery',
     'mage/url'
@@ -11,11 +12,10 @@ require([
 
         let path = window.location.href;
         let fullpath = path.replace('%/', '');
+        let minicartWrapper = '.minicart-wrapper';
 
         url.setBaseUrl(BASE_URL);
-
-        $('body').addClass('stickyTabBar')
-
+            
         $('#navbar a').each(function() {
             if (this.href === fullpath) {
                 if($(this).parent().hasClass('appify-reload')) {
@@ -40,36 +40,23 @@ require([
             }
         });
 
-
-        function checkSlideOpen () {
-            if ($('.minicart-wrapper').hasClass('_has-modal')) {
-                $('.tabMiniCart').addClass('slider-open')
-            } else {
-                $('.tabMiniCart').removeClass('slider-open')
-            }             
-        }
-
         if (!$('.navbarQty').hasClass('hasQty')) {
             setTimeout(function() {
                 $('.initialQty').show()
             }, 1000)
         }
 
-        if ($(window).innerWidth() < 767) {
-            $('#navbar').delay(500).fadeIn(500);
-            
-            $(document).on("click", "#vectraMiniCart", function(event) {
-                event.preventDefault()
-                $('.openMiniCartModal').trigger('click');
-                $('.viewcart').parent().parent().addClass('stickySliderView')
-                checkSlideOpen ()
-            }); 
+        $(document).on("click", "#vectraMiniCart", function(event) {
+            event.preventDefault()
+            $('.mage-dropdown-dialog').toggleClass('displayMinicart')
+            $('.viewcart').parent().parent().addClass('stickySliderView')
+        }); 
 
-            $(document).on('click', '.minicart-wrapper .action-close', function () {
-                $('.tabMiniCart').removeClass('slider-open')
-            })
-        } 
-                    
+        $('#btn-minicart-close').on('click', function(e) { 
+            console.log('clicked this be')
+            $('.mage-dropdown-dialog').removeClass('displayMinicart')
+        });
+           
     });
 
 });

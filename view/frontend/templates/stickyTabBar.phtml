@@ -81,14 +81,20 @@
             'jquery'
         ], function (customerData, $) {
             'use strict';
+
             customerData.get('cart').subscribe(function (cartInfo) {
                 $('.nav-item.tabMiniCart a').append('<div class="navbarQty hasQty">' + cartInfo['summary_count'] + '</div>');
             }, this);
 
             $(document).ready(function () {
+                $('.minicart-wrapper').addClass('stickyTabBar');
                 if ($(window).innerWidth() < 767) {
-                    if ($(<?php if($NavFour['enabled']) ?>)) {
-                        $('.authorization-link, .authorization-link + li').hide()
+                    if ($('.minicart-wrapper').hasClass('stickyTabBar')) {
+                        $('body').css('padding-bottom', '72px')
+                        $('#navbar').delay(500).fadeIn(500);
+                        if ($(<?php if($NavFour['enabled']) ?>)) {
+                            $('.authorization-link, .authorization-link + li').hide()
+                        }
                     }
                 }
             })
