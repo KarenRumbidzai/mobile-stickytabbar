@@ -12,7 +12,6 @@ use \Magento\Framework\Registry;
 use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
 use \Magento\Framework\View\Element\Template;
-// use \Magento\Store\Model\ScopeInterface;
 use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class Index extends Template
