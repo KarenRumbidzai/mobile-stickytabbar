@@ -13,8 +13,8 @@ use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
 use Vectra\StickyTabBar\Block\Icons\Index as IconIndex;
 use \Magento\Framework\View\Element\Template;
-use \Magento\Store\Model\ScopeInterface;
-use Vectra\StickyTabBar\Block\Cart\MiniCartStickyTabBar;
+// use \Magento\Store\Model\ScopeInterface;
+use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class StickyTabBar extends Template
 {
@@ -32,14 +32,14 @@ class StickyTabBar extends Template
         Registry $registry,
         StoreManagerInterface $_storeManager,
         IconIndex $iconIndex,
-        MiniCartStickyTabBar $_miniCartStickyTabBar,
+        StickyTabBarIndex $_indexStickyTabBar,
         $data = []
     )
     {
         $this->iconIndex = $iconIndex;
         $this->_registry = $registry;
         $this->_storeManager = $_storeManager;
-        $this->_miniCartStickyTabBar = $_miniCartStickyTabBar;
+        $this->_indexStickyTabBar = $_indexStickyTabBar;
         parent::__construct($context, $data);
     }
 
@@ -49,7 +49,7 @@ class StickyTabBar extends Template
      * @return bool
      */
     public function isStickyTabEnabled() {
-        return $this->_miniCartStickyTabBar->isStickyTabModuleEnabled();
+        return $this->_indexStickyTabBar->isStickyTabModuleEnabled();
     }
 
     /**
@@ -59,11 +59,11 @@ class StickyTabBar extends Template
      */
     public function getNavOneData() {
         $navOne = [
-            'title' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_one/stickytabbar_one_label'),
-            'enabled' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_one/nav_one_enable'),
+            'title' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_one/stickytabbar_one_label'),
+            'enabled' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_one/nav_one_enable'),
             'icon' => $this->iconIndex->getNavOneIcon(),
-            'iconactive' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_one/nav_one_icon_active'),
-            'link' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_one/stickytabbar_one_link'),
+            'iconactive' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_one/nav_one_icon_active'),
+            'link' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_one/stickytabbar_one_link'),
         ];
 
         return $navOne;
@@ -71,11 +71,11 @@ class StickyTabBar extends Template
 
     public function getNavTwoData() {
         $navTwo = [
-            'title' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_two/stickytabbar_two_label'),
-            'enabled' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_two/nav_two_enable'),
+            'title' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_two/stickytabbar_two_label'),
+            'enabled' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_two/nav_two_enable'),
             'icon' => $this->iconIndex->getNavTwoIcon(),
-            'iconactive' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_two/nav_two_icon_active'),
-            'link' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_two/stickytabbar_two_link'),
+            'iconactive' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_two/nav_two_icon_active'),
+            'link' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_two/stickytabbar_two_link'),
         ];
 
         return $navTwo;
@@ -83,11 +83,11 @@ class StickyTabBar extends Template
 
     public function getNavThreeData() {
         $navThree = [
-            'title' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_three/stickytabbar_three_label'),
-            'enabled' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_three/nav_three_enable'),
+            'title' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_three/stickytabbar_three_label'),
+            'enabled' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_three/nav_three_enable'),
             'icon' => $this->iconIndex->getNavThreeIcon(),
-            'iconactive' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_three/nav_three_icon_active'),
-            'link' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_three/stickytabbar_three_link'),
+            'iconactive' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_three/nav_three_icon_active'),
+            'link' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_three/stickytabbar_three_link'),
         ];
 
         return $navThree;
@@ -95,10 +95,10 @@ class StickyTabBar extends Template
 
     public function getNavFourData() {
         $navFour = [
-            'title' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_four/stickytabbar_four_label'),
-            'enabled' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_four/nav_four_enable'),
+            'title' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_four/stickytabbar_four_label'),
+            'enabled' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_four/nav_four_enable'),
             'icon' => $this->iconIndex->getNavFourIcon(),
-            'iconactive' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_four/nav_four_icon_active'),
+            'iconactive' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_four/nav_four_icon_active'),
         ];
 
         return $navFour;
@@ -106,10 +106,10 @@ class StickyTabBar extends Template
 
     public function getNavFiveData() {
         $navFive = [
-            'title' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_five/stickytabbar_five_label'),
-            'enabled' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_five/nav_five_enable'),
+            'title' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_five/stickytabbar_five_label'),
+            'enabled' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_five/nav_five_enable'),
             'icon' => $this->iconIndex->getNavFiveIcon(),
-            'iconactive' => $this->_miniCartStickyTabBar->getConfigValue('stickytabbar/config_nav_five/nav_five_icon_active'),
+            'iconactive' => $this->_indexStickyTabBar->getConfigValue('stickytabbar/config_nav_five/nav_five_icon_active'),
         ];
 
         return $navFive;
