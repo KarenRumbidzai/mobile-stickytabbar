@@ -85,82 +85,49 @@
 
 // Minicart related styling
 .stickyTabBar {
-
-  @media screen and (min-width: @screen__m) {
-    &.minicart-wrapper {
-      display: block !important;
-    }
-  }
-    
   @media screen and (max-width: (@screen__m - 1)) {
     &.minicart-wrapper {
-      .displayMinicart {
-        display: block !important;
-        position: relative;
+
+      &.active {
         .block-minicart {
-          width: 100vw;
+          transition: all 0.25s ease;
           position: fixed;
-          top: -4px;
-          bottom: 5em;
-          padding: 0;
-          .box-shadow;
-    
-          &:before,
-          &:after { border: none; }
-    
-          #minicart-content-wrapper {
-            margin-top: 45px;
-            padding-right: 15px;
-          }
-          .minicart-items-wrapper {
-            height: auto !important;
-            border-bottom: none;
-            padding-left: 30px;
-            .minicart-items {
-              position: relative;
-              overflow-x: hidden;
-              overflow-y: auto;
-              max-height: 60vh;
-              height: 45vh;
-              // chrome scroll fix
-              &::-webkit-scrollbar {
-                  display: none;
-                  width: 0 !important
-              }
-              // firefox + edge scroll fix
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-    
-              .product-item {
-                  &:last-child {
-                    border-bottom: 1px solid @color-gray_light;
-                  }
-              }
-            }
-          }
+          width: 90%;                    
+          top: 80%;
+          margin-top: 0;
+          right: 0;
+          height: 100%;
+          z-index: 999;
+          border: none;
         }
       }
-      .stickySliderView { 
-        min-width: 100vw;
-        position: fixed;
-        left: 10px;
-        bottom: 90px;
-        padding-top: 20px;
-        border-top: 1px solid @color-gray_light;
+
+      .block-minicart {
+        &:before, &:after {
+            display: none;
+        }
       }
-    }
-
-    #btn-minicart-close {
-      right: 12px;
-      top: 5px;
-      z-index: 999999; 
-    }
-
-  }
   
-  @media screen and (max-width: @screen__xxs) {
-    #top-cart-btn-checkout {
-      font-size: 16px;
+      .minicart-items-wrapper {
+        .minicart-items {
+          position: relative;
+          overflow: hidden;
+          overflow-y: auto;
+          max-height: 60%;
+          height: 60%;
+        }
+        ~ .actions {
+            overflow: hidden;
+            position: fixed;
+            width: 90%;
+            top: 90%;
+            background: @color-white;
+            z-index: 999;
+            right: 0;
+            padding: 20px;
+            border-top: 1px solid @color-gray_light;
+        }
+      } 
     }
   }
 

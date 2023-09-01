@@ -48,14 +48,8 @@ require([
 
         $(document).on("click", "#vectraMiniCart", function(event) {
             event.preventDefault()
-            $('.mage-dropdown-dialog').toggleClass('displayMinicart')
-            $('.viewcart').parent().parent().addClass('stickySliderView')
+            $('.showcart').trigger('click')
         }); 
-
-        $('#btn-minicart-close').on('click', function(e) { 
-            console.log('clicked this be')
-            $('.mage-dropdown-dialog').removeClass('displayMinicart')
-        });
            
     });
 
