@@ -13,7 +13,6 @@ use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
 use Vectra\StickyTabBar\Block\Icons\Index as IconIndex;
 use \Magento\Framework\View\Element\Template;
-// use \Magento\Store\Model\ScopeInterface;
 use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class StickyTabBar extends Template
