@@ -30,7 +30,6 @@ require([
             if ($(this).hasClass('active')) {
                 // Change Title Colour
                 let selectedItem = '.' + this['classList'][0] + '.' + this['classList'][1];
-
                 //Change active state image
                 let activeImg = $(selectedItem + ' input.nav_iv').val();
                 let baseUrl = url.build('/pub/media/vectra_stickytabbar/icons/');
