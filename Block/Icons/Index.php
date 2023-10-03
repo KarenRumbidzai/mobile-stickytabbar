@@ -12,8 +12,7 @@ use \Magento\Framework\Registry;
 use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
 use \Magento\Framework\View\Element\Template;
-use \Magento\Store\Model\ScopeInterface;
-use Vectra\StickyTabBar\Block\Cart\MiniCartStickyTabBar;
+use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class Index extends Template
 {
@@ -29,13 +28,13 @@ class Index extends Template
         TemplateContext $context,
         Registry $registry,
         StoreManagerInterface $_storeManager,
-        MiniCartStickyTabBar $_miniCartStickyTabBar,
+        StickyTabBarIndex $_indexStickyTabBar,
         $data = []
     )
     {
         $this->_registry = $registry;
         $this->_storeManager = $_storeManager;
-        $this->_miniCartStickyTabBar = $_miniCartStickyTabBar;
+        $this->_indexStickyTabBar = $_indexStickyTabBar;
         parent::__construct($context, $data);
     }
 
@@ -48,14 +47,14 @@ class Index extends Template
      */
     public function getIconUrl($image)
     {
-        $useSecure = $this->_miniCartStickyTabBar->getConfigValue('web/secure/use_in_frontend');
+        $useSecure = $this->_indexStickyTabBar->getConfigValue('web/secure/use_in_frontend');
 
-        if($this->_miniCartStickyTabBar->getConfigValue($image)) {
+        if($this->_indexStickyTabBar->getConfigValue($image)) {
             if($useSecure) {
-                return $this->_miniCartStickyTabBar->getConfigValue('web/secure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_miniCartStickyTabBar->getConfigValue($image);
+                return $this->_indexStickyTabBar->getConfigValue('web/secure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
             }
 
-            return $this->_miniCartStickyTabBar->getConfigValue('web/unsecure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_miniCartStickyTabBar->getConfigValue($image);
+            return $this->_indexStickyTabBar->getConfigValue('web/unsecure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
 
         }
     }

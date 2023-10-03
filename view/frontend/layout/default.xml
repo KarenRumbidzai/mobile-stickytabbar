@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="header-wrapper">
-            <referenceBlock name="minicart" template="Vectra_StickyTabBar::cart/minicart.phtml" />
-        </referenceContainer>
         <referenceContainer name="before.body.end">
             <block class="Vectra\StickyTabBar\Block\StickyTabBar" name="stickytabbar" template="Vectra_StickyTabBar::stickyTabBar.phtml"></block>
         </referenceContainer>

@@ -6,12 +6,37 @@
  * @package Vectra_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Block\Cart;
+namespace Vectra\StickyTabBar\Block;
 
+use \Magento\Framework\View\Element\Template;
 use \Magento\Store\Model\ScopeInterface;
+use \Magento\Store\Model\StoreManagerInterface;
+use \Magento\Framework\Registry;
+use \Magento\Backend\Block\Template\Context as TemplateContext;
 
-class MiniCartStickyTabBar extends \Magento\Checkout\Block\Cart\Sidebar
+class Index extends Template
 {
+
+    /**
+     * Constructor
+     * 
+     * @param \Magento\Backend\Block\Template\Context
+     * @param \Magento\Framework\Registry
+     * @param \Magento\Store\Model\StoreManagerInterface
+     * @param array
+    */
+    public function __construct(
+        TemplateContext $context,
+        Registry $registry,
+        StoreManagerInterface $_storeManager,
+        $data = []
+    )
+    {
+        $this->_registry = $registry;
+        $this->_storeManager = $_storeManager;
+        parent::__construct($context, $data);
+    }
+    
     /**
      * Returns value of config field at given path
      * 

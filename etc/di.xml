@@ -17,9 +17,7 @@
 				<item name="png" xsi:type="string">png</item>
 				<item name="PNG" xsi:type="string">png</item>
 				<item name="svg" xsi:type="string">svg</item>
-
 			</argument>
         </arguments>
     </type>
-	<preference for="Magento\Checkout\Block\Cart\Sidebar" type="Vectra\StickyTabBar\Block\Cart\MiniCartStickyTabBar" />
 </config>
