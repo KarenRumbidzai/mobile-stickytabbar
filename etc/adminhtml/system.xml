@@ -1,20 +1,20 @@
 <?xml version="1.0" ?>
 <!--
 /**
-* @author Vectra Team
-* @copyright Copyright © Vectra Business Technologies
-* @package Vectra_StickyTabBar
-*/
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
+ */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="vectra" sortOrder="0" translate="label">
-			<label>Vectra</label>
+        <tab id="karenrumbie" sortOrder="0" translate="label">
+			<label>KarenRumbie</label>
 		</tab>
         <section id="stickytabbar" showInDefault="1" showInWebsite="1" showInStore="0" sortOrder="10" translate="label">
             <label>Mobile sticky tab bar</label>
-            <tab>vectra</tab>
-            <resource>Vectra_StickyTabBar::config_vectra_stickytabbar</resource>
+            <tab>karenrumbie</tab>
+            <resource>KarenRumbie_StickyTabBar::config_karenrumbie_stickytabbar</resource>
             <group id="config_general" showInDefault="1" showInWebsite="1" showInStore="1" translate="label">
                 <label>General</label>
                 <field id="stickytabbar_enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
@@ -39,15 +39,15 @@
                 <field id="nav_one_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="nav_one_icon_active" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Active Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="stickytabbar_one_link" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="3" translate="label" type="text">
@@ -79,15 +79,15 @@
                 <field id="nav_two_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="nav_two_icon_active" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Active Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="stickytabbar_two_link" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="3" translate="label" type="text">
@@ -119,15 +119,15 @@
                 <field id="nav_three_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="nav_three_icon_active" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Active Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="stickytabbar_three_link" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="3" translate="label" type="text">
@@ -159,15 +159,15 @@
                 <field id="nav_four_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="nav_four_icon_active" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Active Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <depends>
@@ -192,15 +192,15 @@
                 <field id="nav_five_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <field id="nav_five_icon_active" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Active Icon</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-                    <upload_dir config="system/filesystem/media">vectra_stickytabbar/icons/</upload_dir>
-                    <base_url type="media" scope_info="1">vectra_stickytabbar/icons/</base_url>
+                    <upload_dir config="system/filesystem/media">karenrumbie_stickytabbar/icons/</upload_dir>
+                    <base_url type="media" scope_info="1">karenrumbie_stickytabbar/icons/</base_url>
                 </field>
 
                 <depends>

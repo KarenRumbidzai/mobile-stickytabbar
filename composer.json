@@ -1,11 +1,11 @@
 {
-    "name": "vectra/stickytabbar",
-    "description": "description",
+    "name": "karenrumbie/stickytabbar",
+    "description": "magento 2 mobile stickytabbar",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [
         {
-            "email": "kr@vectra.co.za",
+            "email": "karen@kashiri.org",
             "name": "Karen Rumbie"
         }
     ],
@@ -16,7 +16,7 @@
             "registration.php"
         ],
         "psr-4" : {
-            "Vectra\\StickyTabBar\\": ""
+            "KarenRumbie\\StickyTabBar\\": ""
         }
     }
 }

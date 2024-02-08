@@ -1,7 +1,7 @@
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+* @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
 require([
@@ -32,7 +32,7 @@ require([
                 let selectedItem = '.' + this['classList'][0] + '.' + this['classList'][1];
                 //Change active state image
                 let activeImg = $(selectedItem + ' input.nav_iv').val();
-                let baseUrl = url.build('/pub/media/vectra_stickytabbar/icons/');
+                let baseUrl = url.build('/pub/media/karenrumbie_stickytabbar/icons/');
                 let fullUrl = baseUrl + activeImg;
                 $(selectedItem + ' img').attr('src', fullUrl);
                 $(selectedItem + ' img').attr('data-amsrc', fullUrl);
@@ -45,7 +45,7 @@ require([
             }, 1000)
         }
 
-        $(document).on("click", "#vectraMiniCart", function(event) {
+        $(document).on("click", "#karenrumbieMiniCart", function(event) {
             event.preventDefault()
             $('.showcart').trigger('click')
         }); 

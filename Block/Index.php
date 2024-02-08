@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+ * @author Karen Rumbie 
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Block;
+namespace KarenRumbie\StickyTabBar\Block;
 
 use \Magento\Framework\View\Element\Template;
 use \Magento\Store\Model\ScopeInterface;

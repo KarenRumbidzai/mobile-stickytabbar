@@ -1,10 +1,10 @@
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_ThemeOptions
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 var config = {
     deps: [
-        "Vectra_StickyTabBar/js/stickyTabBar"
+        "KarenRumbie_StickyTabBar/js/stickyTabBar"
     ]
 };

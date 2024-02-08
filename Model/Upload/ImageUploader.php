@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Model\Upload;
+namespace KarenRumbie\StickyTabBar\Model\Upload;
 
 use Magento\Framework\Exception\LocalizedException;
 use Magento\MediaStorage\Model\File\UploaderFactory;
@@ -35,7 +35,7 @@ class ImageUploader
     /**
      * @var string
      */
-    const FILE_DIR = 'vectra_stickytabbar/icons';
+    const FILE_DIR = 'karenrumbie_stickytabbar/icons';
 
     public function __construct(
         UploaderFactory $uploaderFactory,

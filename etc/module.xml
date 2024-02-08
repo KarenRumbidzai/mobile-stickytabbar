@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <!--
 /**
-* @author Vectra Team
-* @copyright Copyright © Vectra Business Technologies
-* @package Vectra_StickyTabBar
-*/
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
+ */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="Vectra_StickyTabBar" setup_version="1.0.0">
+	<module name="KarenRumbie_StickyTabBar" setup_version="1.0.0">
 		<sequence>
 			<module name="Magento_Checkout" />
 		</sequence>

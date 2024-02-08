@@ -1,19 +1,19 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Block;
+namespace KarenRumbie\StickyTabBar\Block;
 
 use \Magento\Framework\Registry;
 use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
-use Vectra\StickyTabBar\Block\Icons\Index as IconIndex;
+use KarenRumbie\StickyTabBar\Block\Icons\Index as IconIndex;
 use \Magento\Framework\View\Element\Template;
-use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
+use KarenRumbie\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class StickyTabBar extends Template
 {
@@ -23,7 +23,7 @@ class StickyTabBar extends Template
      * @param Magento\Backend\Block\Template\Context
      * @param \Magento\Framework\Registry
      * @param \Magento\Store\Model\StoreManagerInterface
-     * @param Vectra\StickyTabBar\Block\Icons\Index
+     * @param KarenRumbie\StickyTabBar\Block\Icons\Index
      * @param array
      */
     public function __construct(

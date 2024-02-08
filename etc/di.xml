@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <!--
 /**
-* @author Vectra Team
-* @copyright Copyright © Vectra Business Technologies
-* @package Vectra_StickyTabBar
-*/
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
+ */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Vectra\StickyTabBar\Model\Upload\ImageUploader">
+    <type name="KarenRumbie\StickyTabBar\Model\Upload\ImageUploader">
         <arguments>
-            <argument name="baseTmpPath" xsi:type="string">vectra_creditstorebase/tmp/uploads</argument>
-			<argument name="basePath" xsi:type="string">vectra_creditstorebase/uploads</argument>
+            <argument name="baseTmpPath" xsi:type="string">karenrumbie_creditstorebase/tmp/uploads</argument>
+			<argument name="basePath" xsi:type="string">karenrumbie_creditstorebase/uploads</argument>
 			<argument name="allowedExtensions" xsi:type="array">
 				<item name="jpg" xsi:type="string">jpg</item>
 				<item name="jpeg" xsi:type="string">jpeg</item>

@@ -1,8 +1,8 @@
-# Vectra Mobile Stick Tab bar module
+# KarenRumbie Mobile Stick Tab bar module
 
-`vectra/stickytabbar`
+`karenrumbie/stickytabbar`
 
-- [Vectra Mobile Stick Tab bar](#vectra-stickytabbar)
+- [KarenRumbie Mobile Stick Tab bar](#karenrumbie-stickytabbar)
     - [Main Functionalities](#main-functionalities)
     - [Installation](#installation)
     - [Configuration](#configuration)
@@ -24,7 +24,7 @@ Add the following to your main composer.json file:
         ...
         {
             "type": "vcs",
-            "url": "https://bitbucket.org/artcev/mobile-sticky-tab-bar.git"
+            "url": "https://github.com/KarenRumbidzai/mobile-stickytabbar.git"
         }
     ]
 ```
@@ -32,14 +32,14 @@ Add the following to your main composer.json file:
 Next, install the module via composer as follows:
 
 ```bash
-$ composer require vectra/stickytabbar:1.0.0
+$ composer require karenrumbie/stickytabbar:1.0.0
 $ composer update -vvv
 ```
 
 After the composer installation has finished, activate the module by running the following commands from your Magento 2 root directory:
 
 ```bash
-$ php bin/magento module:enable Vectra_StickyTabBar
+$ php bin/magento module:enable KarenRumbie_StickyTabBar
 $ php bin/magento setup:upgrade;
 $ php bin/magento di:compile;
 ```
@@ -49,5 +49,10 @@ $ php bin/magento di:compile;
 Configuration needed for module to work.
 
 ```bash
-Module can be enabled/disabled in admin. It display under Stores > Configuration > Vectra > Mobile sticky tab bar
+Module can be enabled/disabled in admin. It display under Stores > Configuration > KarenRumbie > Mobile sticky tab bar.
+
+PS: I added the iconsFolder in the event you want to upload similar icons in demo in the backend.
 ```
+
+![Scheme](demo/mobile-sticky-fe.png)
+![Scheme](demo/mobile-sticky-be.png)

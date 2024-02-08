@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Controller\Index;
+namespace KarenRumbie\StickyTabBar\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
-use Vectra\StickyTabBar\Model\Upload\ImageUploader;
+use KarenRumbie\StickyTabBar\Model\Upload\ImageUploader;
 
 class UploadImage extends Action
 {

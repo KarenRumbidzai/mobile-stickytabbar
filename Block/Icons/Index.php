@@ -1,18 +1,18 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_StickyTabBar
+ * @author Karen Rumbie Creatives
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_StickyTabBar
  */
 
-namespace Vectra\StickyTabBar\Block\Icons;
+namespace KarenRumbie\StickyTabBar\Block\Icons;
 
 use \Magento\Framework\Registry;
 use \Magento\Store\Model\StoreManagerInterface;
 use Magento\Backend\Block\Template\Context as TemplateContext;
 use \Magento\Framework\View\Element\Template;
-use Vectra\StickyTabBar\Block\Index as StickyTabBarIndex;
+use KarenRumbie\StickyTabBar\Block\Index as StickyTabBarIndex;
 
 class Index extends Template
 {
@@ -51,10 +51,10 @@ class Index extends Template
 
         if($this->_indexStickyTabBar->getConfigValue($image)) {
             if($useSecure) {
-                return $this->_indexStickyTabBar->getConfigValue('web/secure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
+                return $this->_indexStickyTabBar->getConfigValue('web/secure/base_url') . "media/karenrumbie_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
             }
 
-            return $this->_indexStickyTabBar->getConfigValue('web/unsecure/base_url') . "media/vectra_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
+            return $this->_indexStickyTabBar->getConfigValue('web/unsecure/base_url') . "media/karenrumbie_stickytabbar/icons/" . $this->_indexStickyTabBar->getConfigValue($image);
 
         }
     }
